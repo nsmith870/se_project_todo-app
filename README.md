@@ -1,14 +1,22 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
-
+This is just a simple  To Do app to help with your daily task and routines.
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+Here is a pretty basic Way to track, add and remove To Do Task.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+HTML,CSS,JavaScript
+
+Implemented OOP into my JavaScript to Encapsulate logic for different items, and added Events to manage and Add new ToDos,Delete ToDos ,Check/UnCheck in checkbox feature, and Form Validation features.
+
+Data Handling
+UUID Genertation so evey item/ToDo has its own Unique Id.
+
+Added a Date Handling Feature to use and process Due Dates.
+I used the toLocaleString(); for a user friendly display.
+
 
 ## Deployment
 
