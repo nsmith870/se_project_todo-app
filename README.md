@@ -22,4 +22,4 @@ I used the toLocaleString(); for a user friendly display.
 
 This project is deployed on GitHub Pages:
 
-https://github.com/nsmith870/se_project_todo-app
+https://nsmith870.github.io/se_project_todo-app/

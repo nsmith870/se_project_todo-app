@@ -9,8 +9,7 @@ class Todo {
   _getTemplate() {
     return document
       .querySelector(this._templateSelector)
-      .content
-      .querySelector(".todo")
+      .content.querySelector(".todo")
       .cloneNode(true);
   }
 
@@ -31,15 +30,23 @@ class Todo {
 
     this._checkbox = this._element.querySelector(".todo__completed");
     this._deleteBtn = this._element.querySelector(".todo__delete-btn");
+
+    const labelEl = this._element.querySelector(".todo__label");
     const nameEl = this._element.querySelector(".todo__name");
     const dateEl = this._element.querySelector(".todo__date");
 
     nameEl.textContent = this._data.name;
     this._checkbox.checked = this._data.completed;
 
-    if (this._data.date) {
-      const date = new Date(this._data.date);
+    const uid = `todo-${this._data.id}`;
+    this._checkbox.id = uid;
+    labelEl.htmlFor = uid;
+
+    const date = new Date(this._data.date);
+    if (!isNaN(date.getTime())) {
       dateEl.textContent = `Due: ${date.toLocaleDateString()}`;
+    } else {
+      dateEl.textContent = "";
     }
 
     this._setEventListeners();
