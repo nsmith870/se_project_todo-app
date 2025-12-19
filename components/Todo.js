@@ -43,7 +43,7 @@ class Todo {
     labelEl.htmlFor = uid;
 
     const date = new Date(this._data.date);
-    if (!isNaN(date.getTime())) {
+   if (this._data.date && !isNaN(date.getTime()))  {
       dateEl.textContent = `Due: ${date.toLocaleDateString()}`;
     } else {
       dateEl.textContent = "";
